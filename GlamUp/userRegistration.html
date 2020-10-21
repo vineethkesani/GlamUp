@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <!--<div class="container">
+        <h2 class="form_title">User Registration Page </h2>-->
+        <!--Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        sign up
+    </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="height:512px; width:1024px">
+            <div class="modal-content">
+                <div style="background-color:lightpink" class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">User Registration Page</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body" style="background-image:url('images/bg_6.jpg'); background-size: 100%">
+                        <form name="form">
+                            <div id="errorBox"></div>
+                            <div class="form-group">
+                                <label for="first name">First name:</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="First Name" name="first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last name">Last name:</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="last name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact:</label>
+                                <input type="text" class="form-control" id="contact" placeholder="eg: +1 (xxx) xxx-xxxx" name="contact">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-lable">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="eg: abc@gmail.com" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-lable">Re-enter Email:</label>
+                                <input type="email" class="form-control" id="reemail" placeholder="Re-enter Email" name="reemail">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" name="pswd">
+                            </div>
+                            <!--<div class="form-group">
+                            <label for="pwd">Confirm Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Re-Enter password" name="pswd">
+                        </div>-->
+                            <div>
+                                <h6 class="role_title">Role</h6>
+                            </div>
+                            <div>
+                                <select name="Role" id="role">
+                                    <option value="selected">Select your Role</option>
+                                    <option value="Super Admin">Super Admin</option>
+                                    <option value="Supplier">Supplier</option>
+                                    <option value="Buyer">Buyer</option>
+                                </select>
+                            </div>
+                            <div>
+                                <h6 class="Company_title">Company</h6>
+                            </div>
+                            <div>
+                                <select name="Company title" id="company">
+                                    <option value="selected">Select your Company</option>
+                                    <option value="selected">Tommy Hilfigher</option>
+                                    <option value="selected">A&F</option>
+                                    <option value="selected">GAP</option>
+                                    <option value="selected">Zara</option>
+                                    <option value="selected">Hollister</option>
+                                    <option value="selected">Levis</option>
+                                    <option value="selected">Banana Republic</option>
+                                    <option value="selected">Ralph Lauren</option>
+                                    <option value="selected">Coach</option>
+                                </select>
+
+                            </div>
+                            <div>
+                                <h6 class="Country_title">Country</h6>
+                            </div>
+                            <div>
+                                <select name="Country title" id="country">
+                                    <option value="selected">Select your Country</option>
+                                    <option value="selected">USA</option>
+                                    <option value="selected">China</option>
+                                    <option value="selected">India</option>
+                                    <option value="selected">Japan</option>
+                                </select>
+
+                            </div>
+                            <br />
+
+
+                            <!--<button type="submit" class="btn btn-primary">Register</button>-->
+                        </form>
+                    </div>
+                    <div class="modal-footer" style="background-color:lavender">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="register" onclick="Register()">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+        <script src="js/userRegistration.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="js/superAdminCompany.js"></script>
+</body>
+</html>

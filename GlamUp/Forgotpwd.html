@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <!--Made with love by Mutiullah Samim -->
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="stylesheet" type="text/css" href="css/Login.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><strong>GlamUp</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link"><h6 id="goback">Click Here To Go Back To Home</h6></a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="login_admin.html" class="nav-link"><h6 id="goback">Click Here To Go Back To Login Page</h6></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+
+                <div class="card-body">
+
+                    <label for="reset_username" id="bck_white"><strong>Enter your Username</strong></label>
+                    <input type="text" id="reset_username" placeholder="Username" />
+                    <br />
+                    <p id="bck_white"><strong>Please select a question below:</strong></p>
+                    <select name="Select a question">
+                        <option value="question" id="question" id="bck_white">Please select a question</option>
+                        <option value="color" id="color">What is your favourite color?</option>
+                        <option value="pet" id="pet">What is your favourite pet?</option>
+                        <option value="mother" id="mother">What is your mother's maiden name?</option>
+                    </select>
+                    <label for="reset_answer" id="bck_white"><strong>Enter your answer here:</strong></label>
+                    <input type="text" id="reset_answer" placeholder="Answer" />
+                    <label for="reset_pwd" id="bck_white"><strong>Enter your New Password</strong></label>
+                    <input type="password" id="reset_pwd" placeholder="New Password" />
+                    <label for="reset_repwd" id="bck_white"><strong>Re-enter your Password</strong></label>
+                    <input type="password" id="reset_repwd" placeholder="Re-enter Password" />
+
+                    <div class="form-group">
+                        <input type="button" value="Reset" class="btn float-right login_btn" onclick="resetpwd()">
+                    </div>
+
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links" id="warning1">
+                        <div class="d-flex justify-content-center links" id="warning1"></div>
+                    </div>
+                    <div class="d-flex justify-content-center links" id="successful">
+                        <div class="d-flex justify-content-center links" id="successful"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+        <script src="js/Login.js"></script>
+        <script src="js/Forgotpwd.js"></script>
+        <script src="js/Team_JS_File.js"></script>
+        <script src="js/userRegistration.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+    <!-- styles -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+    <!-- theme stylesheet -->
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="css/Home.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!-- *** TOPBAR ***
+    _________________________________________________________ -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><strong><b>GlamUp</b></strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="nav navbar-nav" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link"><strong>Home</strong></a></li>
+                    <li class="nav-item"><a href="userRegistration.html" class="nav-link"><strong>User Management</strong></a></li>
+                    <li class="nav-item"><a href="CompanyManagment.html" class="nav-link"><strong>Company Management</strong></a></li>
+                    <li class="nav-item"><a href="ProductManagement.html" class="nav-link"><strong>Product Management</strong></a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link"><strong>Log Out</strong></a></li>
+
+                    <li class="nav-item cta cta-colored"><a href="shopping_cart.html" class="nav-link"><strong>Cart</strong><span class="icon-shopping_cart"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-wrap hero-bread" style="background-image: url('images/img_bg_3.jpg');">
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-xl-end justify-content-end">
+                <!--<div class="col-md-3 ftco-animate text-center">-->
+                <p class="breadcrumbs"><span class="mr-2"></span></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="col-md-12" id="basket">
+            <div class="box">
+                <form method="post" action="PurchaseOrderPage.html">
+                    <h1><b><i>My Shopping Cart</i></b></h1>
+                    <div class="table-responsive" id="newCart">
+
+                    </div>
+                    <!-- /.table-responsive -->
+
+                    <div class="box-footer">
+                        <div class="pull-left">
+                            <a href="ProductManagement.html" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</a>
+                        </div>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-default" id="updateCartButton" onclick="upDate()"><i class="fa fa-refresh"></i> Update cart</button>
+                            <a href="PO_Page.html" class="btn btn-primary"><i class="fa fa-chevron-right"></i> Proceed to checkout</a>
+                            <!--<button class="btn btn-primary" onclick="PO_Page.html"> Proceed to checkout <i class="fa fa-chevron-right"></i></button>-->
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!-- /.box -->
+            <div class="row same-height-row">
+                <div class="col-md-3 col-sm-6">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-9 -->
+
+        <div class="col-md-12">
+            <div class="box" id="order-summary">
+                <div class="box-header">
+                    <h1><b><i>Order Summary</i></b></h1>
+                </div>
+                <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Order subtotal</td>
+                                <th id="subTotal">$0.00</th>
+                            </tr>
+                            <tr>
+                                <td>Shipping and handling</td>
+                                <th>$0.00</th>
+                            </tr>
+                            <tr>
+                                <td>Tax</td>
+                                <th id="tax">$0.00</th>
+                            </tr>
+                            <tr class="total">
+                                <td>Total</td>
+                                <th id="total">$0.00</th>
+                            </tr>
+                            <tr class="alert alert-warning">
+                                <td colspan="2">Note: Shopping cart items will no longer be available once you log out, Please check out all items before logging out!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-3 -->
+    </div>
+    <!-- /.container -->
+    <!-- Add Modal -->
+    <!-- Edit Modal -->
+    <!-- Delete Modal -->
+    <!-- *** SCRIPTS TO INCLUDE ***
+    _________________________________________________________ -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap-hover-dropdown.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/front.js"></script>
+    <script src="js/roles.js"></script>
+    <script src="js/shoppingCart.js"></script>
+    <script src="js/jspdf.js"></script>
+    <script src="js/ShoppingCart.js"></script>
+
+</body>
+
+</html>

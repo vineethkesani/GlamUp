@@ -1,0 +1,432 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous">
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.0.0/dist/bootstrap-validate.js" integrity="sha384-YmuBsjGRLbP6xIXehXIvB6ftbTViDPXx/goUnD/B7EZ8qDE5JVVuBN+Zws8lzmh7"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/product.js"></script>
+    <title></title>
+    <!-- Styling -->
+    <style>
+        table {
+            margin: 20px;
+        }
+
+        thead {
+            background-color: lightpink;
+            color: black;
+            font-weight: bold;
+        }
+
+        .table tbody tr td {
+            padding: 15px !important;
+        }
+
+        #search {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+        #search {
+            width: 100%;
+        }
+
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: black; /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+
+            #myBtn:hover {
+                background-color: #555; /* Add a dark-grey background on hover */
+            }
+
+        .fa {
+            color: black;
+        }
+
+        .modal-header {
+            background-color: lightpink;
+        }
+
+        .modal-footer {
+            background-color: lightslategray;
+        }
+
+        label {
+            color: black;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <!--Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><strong>GlamUp</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="Home.html" class="nav-link"><strong>Home</strong></a></li>
+                    <li class="nav-item"><a href="User_Management.html" class="nav-link"><strong>User Management</strong></a></li>
+                    <li class="nav-item"><a href="CompanyManagment.html" class="nav-link"><strong>Company Management</strong></a></li>
+                    <li class="nav-item"><a href="ProductManagement.html" class="nav-link"><strong>Product Management</strong></a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link"><strong>Log Out</strong></a></li>
+
+                    <li class="nav-item cta cta-colored"><a href="shopping_cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top Background Image -->
+
+    <div class="hero-wrap hero-bread" style="background-image: url('images/img_bg_3.jpg')">
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-xl-end justify-content-end">
+                <div class="col-md-4 text-center">
+                    <h1 class="mb-0 bread" style="color:black;"><b>User Managment</b></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="container" id="addUser">
+        <span class="clearfix"></span>
+        <button type="button" class="btn btn-primary float-right" id="addBtn" data-toggle="modal" data-target="#AddUserModal">
+            Add User
+            <i class="material-icons">&hearts;</i>
+        </button>
+
+        <form class="form-inline">
+            <!--<input class="form-control mr-sm-2" type="text" id="search" name="search" placeholder="Search Company ..."
+           title="Type a name" style="background-image: url('searchicon.png');">-->
+            <input class="form-control mr-sm-2" type="text" id="searchBox" placeholder="Search.... " aria-label="Search">
+        </form>
+        <!-- <div id="userRole">
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="admin" name="userRole" class="custom-control-input" checked>
+        <label class="custom-control-label" for="admin">Admin</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="user" name="userRole" class="custom-control-input">
+        <label class="custom-control-label" for="user">User</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Gur" name="userRole" class="custom-control-input">
+        <label class="custom-control-label" for="Gur">Gursimran</label>
+    </div>
+    <button type="button" id="userRolebtn" class="btn btn-primary" onclick="onUserRole()">UserRole</button>
+    </div> -->
+        <br />
+    </div>
+
+    <!--Creating Table  -->
+
+    <table id="table" class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Email</th>
+                <th scope="col">User Role</th>
+                <th scope="col">Company</th>
+                <th scope="col">Country</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableRow"></tbody>
+    </table>
+
+    <!-- Modal Add Users -->
+
+    <div class="modal fade" id="AddUserModal" tabindex="-1" role="dialog" aria-labelledby="AddUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border-radius: 50px">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AddUserModalLabel"><b>Add New User</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-image:url('Image/bg_6.jpg')">
+                    <form name="addForm" data-toggle="validator" role="form">
+                        <div class="form-group">
+                            <input type="hidden" id="hiddentValue">
+                            <i class="fa fa-user icon"></i>
+                            <label>First Name</label>
+                            <input type="text" class="form-control" id="Firstname" placeholder="First Name" required>
+                            <small id="phoneHelp" style="color:red;">*Please enter your first name</small>
+                        </div>
+                        <div class="form-group ">
+                            <i class="fa fa-user name"></i>
+                            <label>Last Name</label>
+                            <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="10" class="form-control" id="Lastname" placeholder="Last Name" required>
+                            <small id="phoneHelp" style="color:red;">*Please enter your last name</small>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-user icon-address-book"></i>
+                            <label>Contact</label>
+                            <input class="form-control" id="Contact" placeholder="eg: +1 (xxx) xxx-xxxx">
+                            <small id="phoneHelp" style="color:red;">*Please enter Phone No.</small>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-envelope icon"></i>
+                            <label>Email</label>
+                            <input type="text" class="form-control" id="Email" placeholder="Email" required>
+                            <small id="emailHelp" style="color:red;">*Please enter Email</small>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-user icon-asterisk"></i>
+                            <label>User Role</label>
+                            <select id="Role" class="form-control">
+                                <option>Super Admin</option>
+                                <option>Supplier Admin</option>
+                                <option>Supplier User</option>
+                                <option>Buyer Admin</option>
+                                <option>Buyer</option>
+                            </select>
+                            <small id="nameHelp" style="color:red;">*Please select your role</small>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-user icon-home"></i>
+                            <label>Company</label>
+                            <select id="Company" class="form-control">
+                                <option>GlamUp</option>
+                                <option>Tommy Hilfiger</option>
+                                <option>A&F</option>
+                                <option>Gap</option>
+                                <option>Zara</option>
+                                <option>Levis</option>
+                                <option>H&M</option>
+                                <option>Banana Republic</option>
+                                <option>Ralph Lauren</option>
+                                <option>Hollister</option>
+                                <option>Coach</option>
+                            </select>
+                            <small id="nameHelp" style="color:red;">*Please select company name</small>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-user icon-my_location"></i>
+                            <label>Country</label>
+                            <input type="text" class="form-control" id="Country" placeholder="Country" required>
+                            <small id="countryHelp" style="color:red;">*Please enter country</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addUser()" data-dismiss="modal">Add User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit Users -->
+    <div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog" aria-labelledby="EditUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditUserModalLabel">Edit Current User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-image:url('Image/bg_6.jpg')">
+                    <div class="form-group">
+                        <i class="fa fa-user icon"></i>
+                        <input type="hidden" id="hiddentValue">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" id="editFirstName" placeholder="Firstname">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-user name"></i>
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" id="editLastName" placeholder="Lastname">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-user icon-address-book"></i>
+                        <label>Contact</label>
+                        <input class="form-control" id="editContact" placeholder="eg: +1 (xxx) xxx-xxxx">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-envelope icon"></i>
+                        <label>Email</label>
+                        <input type="text" class="form-control" id="editEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-user icon-asterisk"></i>
+                        <label>User Role</label>
+                        <select id="editRole" class="form-control">
+                            <option>Super Admin</option>
+                            <option>Supplier Admin</option>
+                            <option>Supplier User</option>
+                            <option>Buyer Admin</option>
+                            <option>Buyer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-user icon-home"></i>
+                        <label>Company</label>
+                        <select id="editCompany" class="form-control">
+                            <option>GlamUp</option>
+                            <option>Tommy Hilfiger</option>
+                            <option>A&F</option>
+                            <option>Gap</option>
+                            <option>Zara</option>
+                            <option>Levis</option>
+                            <option>H&M</option>
+                            <option>Banana Republic</option>
+                            <option>Ralph Lauren</option>
+                            <option>Hollister</option>
+                            <option>Coach</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-user icon-my_location"></i>
+                        <label>Country</label>
+                        <input type="text" class="form-control" id="editCountry" placeholder="Country">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="onSaveEdit()" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete Users -->
+    <div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <input type="hidden" id="hiddentValue">
+                    <h5 class="modal-title" id="DeleteUserModalLabel">Delete User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" ng-click="onDelete()" data-dismiss="modal">Delete User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="ftco-footer bg-light ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">GlamUp</h2>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Menu</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Shop</a></li>
+                            <li><a href="#" class="py-2 d-block">About</a></li>
+                            <li><a href="#" class="py-2 d-block">Journal</a></li>
+                            <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Help</h2>
+                        <div class="d-flex">
+                            <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+                                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
+                                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
+                                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
+                                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-2 d-block">FAQs</a></li>
+                                <li><a href="#" class="py-2 d-block">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="material-icons"><b>&uarr;</b></i>
+    </button>
+    <script src="js/Admin.js"></script>
+    <script src="js/SearchUsers.js"></script>
+    <script src="js/SuperAdmin.js"></script>
+    <script src="js/superAdminCompany.js"></script>
+    <script src="js/ShoppingCart.js"></script>
+</body>
+</html>
